@@ -1,0 +1,16 @@
+== What'sUp content-only control split by whether the real flip changes the answer (post hoc); unpaired bootstrap B=10000 seed 0
+  q3b   real flip leaves the answer unchanged: up-down 92/206  44.7; left-right 2/206   1.0
+        all items: FB_v  46.1 FB_h  97.6 D  51.5 [44.2, 58.7]
+        items whose answer the real flip changes: up-down n=114 FB_v  74.6; left-right n=204 FB_h  98.0; D  23.5 [15.4, 31.9]
+        up-down items whose answer the real flip leaves unchanged n=92: FB_v  10.9
+        GC (orig and real flip both correct): up-down n=105 back to the orig answer  71.4; left-right n=192 back to the orig answer  81.2; up-down − left-right  -9.8 [-20.4, 0.4]
+  q7b   real flip leaves the answer unchanged: up-down 103/206  50.0; left-right 8/206   3.9
+        all items: FB_v  36.4 FB_h  91.7 D  55.3 [47.6, 62.6]
+        items whose answer the real flip changes: up-down n=103 FB_v  61.2; left-right n=198 FB_h  93.9; D  32.8 [23.0, 43.0]
+        up-down items whose answer the real flip leaves unchanged n=103: FB_v  11.7
+        GC (orig and real flip both correct): up-down n=99 back to the orig answer  60.6; left-right n=154 back to the orig answer  66.2; up-down − left-right  -5.6 [-18.0, 6.4]
+  ivl2b real flip leaves the answer unchanged: up-down 57/206  27.7; left-right 0/206   0.0
+        all items: FB_v  64.6 FB_h  94.2 D  29.6 [22.3, 36.9]
+        items whose answer the real flip changes: up-down n=149 FB_v  81.9; left-right n=206 FB_h  94.2; D  12.3 [5.5, 19.4]
+        up-down items whose answer the real flip leaves unchanged n=57: FB_v  19.3
+        GC (orig and real flip both correct): up-down n=68 back to the orig answer  66.2; left-right n=196 back to the orig answer  91.3; up-down − left-right -25.2 [-37.4, -13.4]

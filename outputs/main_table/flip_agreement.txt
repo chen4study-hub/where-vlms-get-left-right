@@ -1,0 +1,56 @@
+== qwen2.5-vl-3b-instruct.jsonl
+[lr] orig predicts left:  71.0% [66,75] n=383; gold  47.8% [43,53] n=383
+[ud] orig predicts above:  45.3% [39,51] n=267; gold  53.9% [48,60] n=267
+  vit_w      vs hflip  lr:  87.5% [84,90] n=383 | ud:  88.8% [84,92] n=267
+  llm_w      vs hflip  lr:  45.7% [41,51] n=383 | ud:  87.6% [83,91] n=267
+  orig       vs hflip  lr:  46.0% [41,51] n=383 | ud:  88.0% [84,91] n=267
+  vit_h      vs vflip  lr:  86.9% [83,90] n=383 | ud:  70.4% [65,76] n=267
+  orig       vs vflip  lr:  86.4% [83,89] n=383 | ud:  59.9% [54,66] n=267
+  ids_rot180 vs rot180 lr:  82.2% [78,86] n=383
+  orig       vs rot180 lr:  48.3% [43,53] n=383
+  flip rates, geometry-consistent subset: orig→vit_w lr  83.3% [77,88] n=186 | ud   4.4% [2,8] n=182
+                                         orig→llm_w lr   0.5% [0,3] n=186
+                                         orig→vit_h ud  45.5% [35,56] n=88 | lr  10.8% [7,15] n=241
+                                         orig→llm_h ud   9.1% [5,17] n=88
+== qwen2.5-vl-7b-instruct.jsonl
+[lr] orig predicts left:  50.4% [45,55] n=383; gold  47.8% [43,53] n=383
+[ud] orig predicts above:  53.9% [48,60] n=267; gold  53.9% [48,60] n=267
+  vit_w      vs hflip  lr:  93.2% [90,95] n=383 | ud:  92.9% [89,95] n=267
+  llm_w      vs hflip  lr:   8.9% [6,12] n=383 | ud:  95.5% [92,97] n=267
+  orig       vs hflip  lr:   8.6% [6,12] n=383 | ud:  95.5% [92,97] n=267
+  vit_h      vs vflip  lr:  87.7% [84,91] n=383 | ud:  63.7% [58,69] n=267
+  orig       vs vflip  lr:  91.6% [88,94] n=383 | ud:  30.7% [25,36] n=267
+  ids_rot180 vs rot180 lr:  81.5% [77,85] n=383
+  orig       vs rot180 lr:  12.0% [9,16] n=383
+  flip rates, geometry-consistent subset: orig→vit_w lr  95.4% [93,97] n=327 | ud   5.1% [3,9] n=234
+                                         orig→llm_w lr   0.3% [0,2] n=327
+                                         orig→vit_h ud  51.4% [44,59] n=173 | lr   8.2% [6,12] n=318
+                                         orig→llm_h ud  12.1% [8,18] n=173
+== internvl3-2b-hf.jsonl
+[lr] orig predicts left:  50.7% [46,56] n=383; gold  47.8% [43,53] n=383
+[ud] orig predicts above:  58.4% [52,64] n=267; gold  53.9% [48,60] n=267
+  vit_w      vs hflip  lr:  84.3% [80,88] n=383 | ud:  86.5% [82,90] n=267
+  llm_w      vs hflip  lr:  21.4% [18,26] n=383 | ud:  91.0% [87,94] n=267
+  orig       vs hflip  lr:  19.8% [16,24] n=383 | ud:  90.6% [87,94] n=267
+  vit_h      vs vflip  lr:  77.8% [73,82] n=383 | ud:  76.4% [71,81] n=267
+  orig       vs vflip  lr:  84.1% [80,87] n=383 | ud:  56.2% [50,62] n=267
+  ids_rot180 vs rot180 lr:  76.2% [72,80] n=383
+  orig       vs rot180 lr:  26.9% [23,32] n=383
+  flip rates, geometry-consistent subset: orig→vit_w lr  88.5% [84,92] n=244 | ud   7.8% [5,12] n=193
+                                         orig→llm_w lr   2.5% [1,5] n=244
+                                         orig→vit_h ud  69.8% [60,78] n=96 | lr  15.5% [12,21] n=245
+                                         orig→llm_h ud   4.2% [2,10] n=96
+== internvl3-8b-hf.jsonl
+[lr] orig predicts left:  49.9% [45,55] n=383; gold  47.8% [43,53] n=383
+[ud] orig predicts above:  53.9% [48,60] n=267; gold  53.9% [48,60] n=267
+  vit_w      vs hflip  lr:  93.2% [90,95] n=383 | ud:  92.5% [89,95] n=267
+  llm_w      vs hflip  lr:   9.4% [7,13] n=383 | ud:  95.1% [92,97] n=267
+  orig       vs hflip  lr:   8.6% [6,12] n=383 | ud:  94.4% [91,97] n=267
+  vit_h      vs vflip  lr:  84.9% [81,88] n=383 | ud:  63.3% [57,69] n=267
+  orig       vs vflip  lr:  92.4% [89,95] n=383 | ud:  36.3% [31,42] n=267
+  ids_rot180 vs rot180 lr:  84.1% [80,87] n=383
+  orig       vs rot180 lr:   9.4% [7,13] n=383
+  flip rates, geometry-consistent subset: orig→vit_w lr  95.5% [93,97] n=335 | ud   3.9% [2,7] n=231
+                                         orig→llm_w lr   1.2% [0,3] n=335
+                                         orig→vit_h ud  48.1% [41,56] n=162 | lr  12.0% [9,16] n=334
+                                         orig→llm_h ud   3.1% [1,7] n=162

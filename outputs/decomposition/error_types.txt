@@ -1,0 +1,9 @@
+## Qwen 3b
+  lr errors 103: pair-prior errors (same label after the swap) 95 (92%), of which same answer as the blank image 91; direction errors (label inverted after the swap) 8
+  ud errors 69: pair-prior errors (same label after the swap) 54 (78%), of which same answer as the blank image 34; direction errors (label inverted after the swap) 15
+## Qwen 7b
+  lr errors 38: pair-prior errors (same label after the swap) 31 (82%), of which same answer as the blank image 20; direction errors (label inverted after the swap) 7
+  ud errors 28: pair-prior errors (same label after the swap) 18 (64%), of which same answer as the blank image 8; direction errors (label inverted after the swap) 10
+## InternVL3-2B
+  lr errors 107: pair-prior errors (same label after the swap) 99 (93%), of which same answer as the blank image 47; direction errors (label inverted after the swap) 8
+  ud errors 58: pair-prior errors (same label after the swap) 53 (91%), of which same answer as the blank image 20; direction errors (label inverted after the swap) 5

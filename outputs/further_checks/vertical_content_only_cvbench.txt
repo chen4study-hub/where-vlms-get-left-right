@@ -1,0 +1,13 @@
+== CV-Bench, content-only control (post hoc): flip-back rate FB = answer under pix_both differs from the answer under pix (all items of the axis); D = FB_h − FB_v, unpaired bootstrap B=10000 seed 0
+  q3b   up-down n=267 FB_v  38.2 (vit_h alone  36.3, llm_h alone   6.0); left-right n=383 FB_h  42.8 (vit_w alone  43.6); D   4.6 [-3.1, 11.9]
+        GC ud n=88: vflip_both_h back to the orig answer 71/88  80.7 [71.2, 87.6]
+        GC lr n=186: hflip_both_w back to the orig answer 144/186  77.4 [70.9, 82.8]
+  q7b   up-down n=267 FB_v  58.8 (vit_h alone  58.8, llm_h alone  18.0); left-right n=383 FB_h  84.1 (vit_w alone  83.8); D  25.3 [18.2, 32.2]
+        GC ud n=173: vflip_both_h back to the orig answer 140/173  80.9 [74.4, 86.1]
+        GC lr n=327: hflip_both_w back to the orig answer 297/327  90.8 [87.2, 93.5]
+  ivl2b up-down n=267 FB_v  38.2 (vit_h alone  38.6, llm_h alone   9.0); left-right n=383 FB_h  76.0 (vit_w alone  77.0); D  37.8 [30.5, 45.0]
+        GC ud n=96: vflip_both_h back to the orig answer 77/96  80.2 [71.1, 86.9]
+        GC lr n=244: hflip_both_w back to the orig answer 222/244  91.0 [86.7, 94.0]
+  ivl8b up-down n=267 FB_v  58.8 (vit_h alone  56.2, llm_h alone   7.9); left-right n=383 FB_h  88.0 (vit_w alone  87.5); D  29.2 [22.5, 35.7]
+        GC ud n=162: vflip_both_h back to the orig answer 140/162  86.4 [80.3, 90.9]
+        GC lr n=335: hflip_both_w back to the orig answer 316/335  94.3 [91.3, 96.3]

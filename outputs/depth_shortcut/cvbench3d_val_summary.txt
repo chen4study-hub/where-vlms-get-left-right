@@ -1,0 +1,10 @@
+== 3B  items consistent 168 / counter 30 / all 286
+  orig accuracy: consistent 86.3, counter 50.0, all 77.6 (consistent − counter = 36.3)
+  vit_h  change rate  32.5%  [27.4, 38.1]  n=286
+  vit_w  change rate  27.6%  [22.8, 33.1]  n=286
+  llm_h  change rate   8.4%  [5.7, 12.2]  n=286
+== 7B  items consistent 168 / counter 30 / all 286
+  orig accuracy: consistent 93.5, counter 76.7, all 87.4 (consistent − counter = 16.8)
+  vit_h  change rate  39.9%  [34.4, 45.6]  n=286
+  vit_w  change rate  15.7%  [12.0, 20.4]  n=286
+  llm_h  change rate   7.7%  [5.1, 11.4]  n=286

@@ -1,0 +1,16 @@
+== qwen2.5-vl-3b-instruct.jsonl
+  vit_h  change rate, heuristic-following group  37.4% [30.0,45.5] n=147 | opposing group   9.7% [3.3,24.9] n=31
+  vit_w  change rate, heuristic-following group  15.0% [10.2,21.5] n=153 | opposing group  50.0% [33.2,66.8] n=30
+  llm_h  change rate, heuristic-following group   2.7% [1.1,6.8] n=147 | opposing group   3.3% [0.6,16.7] n=30
+== qwen2.5-vl-7b-instruct.jsonl
+  vit_h  change rate, heuristic-following group  48.1% [40.4,55.9] n=156 | opposing group  23.5% [12.4,40.0] n=34
+  vit_w  change rate, heuristic-following group  10.5% [6.7,16.2] n=162 | opposing group  35.5% [21.1,53.1] n=31
+  llm_h  change rate, heuristic-following group   5.0% [2.6,9.6] n=159 | opposing group   6.2% [1.7,20.1] n=32
+== test_qwen2.5-vl-3b-instruct.jsonl
+  vit_h  change rate, heuristic-following group  46.8% [39.8,53.9] n=188 | opposing group  10.8% [4.3,24.7] n=37
+  vit_w  change rate, heuristic-following group  20.2% [15.1,26.5] n=188 | opposing group  51.4% [35.9,66.6] n=37
+  llm_h  change rate, heuristic-following group   5.3% [2.9,9.5] n=188 | opposing group   0.0% [0.0,9.4] n=37
+== test_qwen2.5-vl-7b-instruct.jsonl
+  vit_h  change rate, heuristic-following group  51.0% [44.1,57.9] n=196 | opposing group  17.2% [7.6,34.5] n=29
+  vit_w  change rate, heuristic-following group  16.3% [11.8,22.1] n=196 | opposing group  27.6% [14.7,45.7] n=29
+  llm_h  change rate, heuristic-following group   6.1% [3.5,10.4] n=196 | opposing group   0.0% [0.0,11.7] n=29

@@ -1,0 +1,69 @@
+== What'sUp, vertical content-only control (flip-back rate = answer under pix_both differs from the answer under pix, all items of the axis; D = FB_h − FB_v, unpaired bootstrap)
+  reproduction q3b orig<->main run orig: 412/412
+  reproduction q3b hflip<->main run hflip: 206/206
+  reproduction q3b vflip<->main run vflip: 206/206
+  q3b   up-down n=206: FB_v  46.1 (vit_h alone  44.2, llm_h alone   7.8); left-right n=206: FB_h  97.6; D  51.5 [44.2, 58.7]
+        GC up-down n=105: vflip_both_h back to the orig answer  71.4
+  reproduction q7b orig<->main run orig: 412/412
+  reproduction q7b hflip<->main run hflip: 206/206
+  reproduction q7b vflip<->main run vflip: 206/206
+  q7b   up-down n=206: FB_v  36.4 (vit_h alone  36.4, llm_h alone   6.8); left-right n=206: FB_h  91.7; D  55.3 [47.6, 62.6]
+        GC up-down n=99: vflip_both_h back to the orig answer  60.6
+  reproduction ivl2b orig<->main run orig: 412/412
+  reproduction ivl2b hflip<->main run hflip: 206/206
+  reproduction ivl2b vflip<->main run vflip: 206/206
+  ivl2b up-down n=206: FB_v  64.6 (vit_h alone  62.1, llm_h alone  24.3); left-right n=206: FB_h  94.2; D  29.6 [22.3, 36.9]
+        GC up-down n=68: vflip_both_h back to the orig answer  66.2
+
+== Width mirror in chosen sets of ViT blocks (GC left-right items = main-run orig and hflip both correct; flips relative to the main-run orig; paired bootstrap)
+  reproduction q7b blk_b31<->main run orig_vit_blk31: 383/383
+  reproduction q7b blk_g4<->main run orig_vit_global: 383/383
+  reproduction q7b blk_all<->main run orig_vit_all: 383/383
+  reproduction q7b orig<->main run base_orig: 383/383
+  q7b n=327: b31 72.5  g4 95.4  all 95.4  g3_early 18.7  win24_30 0.9  lastg2 91.4  lastg3 96.6  last2 78.6  last4 81.0  last8 81.0  last16 93.3  nonglobal 6.7
+      g4/all 1.00 [0.97, 1.03]; last8 − b31   8.6 [4.9, 12.2]
+  reproduction q3b blk_b31<->main run orig_vit_blk31: 383/383
+  reproduction q3b blk_g4<->main run orig_vit_global: 383/383
+  reproduction q3b blk_all<->main run orig_vit_all: 383/383
+  reproduction q3b orig<->main run base_orig: 383/383
+  q3b n=186: b31 86.6  g4 87.1  all 83.3  g3_early 22.0  win24_30 8.1  lastg2 88.7  lastg3 89.8  last2 86.0  last4 87.6  last8 88.2  last16 91.4  nonglobal 18.3
+      g4/all 1.05 [0.98, 1.11]; last8 − b31   1.6 [0.0, 3.8]
+
+== InternVL3-2B, default tiling (GC left-right items re-determined from the orig and hflip of this tiled run; flips relative to this run's orig)
+  left-right items 383, GC 246; tile layouts (columns, rows, thumbnail) {(4, 3, True): 163, (3, 2, True): 110, (3, 4, True): 37, (1, 1, False): 36, (2, 3, True): 25, (2, 1, True): 10}
+    vit_w_tile         212/246  86.2 [81.3, 89.9]
+    llm_w_tile         5/246   2.0 [0.9, 4.7]
+    llm_w_img          7/246   2.8 [1.4, 5.8]
+    order_only_w_tile  6/246   2.4 [1.1, 5.2]
+    order_only_w_img   7/246   2.8 [1.4, 5.8]
+
+== InternVL3-2B, options in reverse order (measured as in the Qwen2.5-VL run with reversed options)
+  reproduction (original order, first 3 items): 57/57 as in the main run
+  agree_vit_w_hflip_lr   original  84.3  reversed  88.5  diff   4.2
+  flip_vit_w_lr          original  88.5  reversed  92.8  diff   4.2
+  flip_llm_w_lr          original   2.5  reversed   2.6  diff   0.1
+  flip_vit_h_ud          original  69.8  reversed  66.4  diff  -3.4
+  flip_llm_h_ud          original   4.2  reversed  12.6  diff   8.4
+  flip_vit_w_ud          original  13.5  reversed  16.0  diff   2.4
+  quantities differing by more than 5 points between the two orders: flip_llm_h_ud
+  reversed order: 486 ties (of 12350 rows)
+
+== Qwen3-VL-4B, cv2d (GC re-determined from this run's orig and pixel flip; flips relative to this run's orig)
+  left-right items 383, GC 344; orig accuracy (left-right)  93.2
+    vit_w           323/344  93.9 [90.8, 96.0]
+    llm_w           7/344   2.0 [1.0, 4.1]
+    order_only_w    1/344   0.3 [0.1, 1.6]
+    order_and_id_w  8/344   2.3 [1.2, 4.5]
+    vit_w agrees with hflip  89.6 (orig with hflip   6.3)
+    hflip_both_w flip-back rate  91.4
+    up-down GC n=196: vit_h flips  51.5
+    up-down GC n=196: llm_h flips   1.0
+    up-down GC n=196: vit_w flips   3.1
+    up-down GC n=196: llm_w flips   0.5
+
+== Qwen3-VL-4B, whatsup (GC re-determined from this run's orig and pixel flip; flips relative to this run's orig)
+  left-right items 206, GC 203; orig accuracy (left-right)  99.0
+    vit_w           202/203  99.5 [97.3, 99.9]
+    llm_w           3/203   1.5 [0.5, 4.3]
+    order_only_w    0/203   0.0 [0.0, 1.9]
+    vit_w agrees with hflip  90.3 (orig with hflip   0.0)

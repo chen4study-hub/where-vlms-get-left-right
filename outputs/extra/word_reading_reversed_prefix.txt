@@ -1,0 +1,8 @@
+== qwen2.5-vl-3b.jsonl
+  orig   n=100: prefix of the reversed word ≥2   1.0%  ≥3   0.0% | prefix of the word ≥2 100.0%  ≥3 100.0% | control (another word reversed) ≥2   0.0%  ≥3   0.0%
+  vit_w  n=100: prefix of the reversed word ≥2  32.0%  ≥3  18.0% | prefix of the word ≥2   2.0%  ≥3   0.0% | control (another word reversed) ≥2   3.0%  ≥3   1.0%
+  hflip  n=100: prefix of the reversed word ≥2  21.0%  ≥3  11.0% | prefix of the word ≥2  55.0%  ≥3  53.0% | control (another word reversed) ≥2   1.0%  ≥3   0.0%
+== qwen2.5-vl-7b.jsonl
+  orig   n=100: prefix of the reversed word ≥2   1.0%  ≥3   0.0% | prefix of the word ≥2 100.0%  ≥3 100.0% | control (another word reversed) ≥2   0.0%  ≥3   0.0%
+  vit_w  n=100: prefix of the reversed word ≥2  34.0%  ≥3  14.0% | prefix of the word ≥2   3.0%  ≥3   1.0% | control (another word reversed) ≥2   4.0%  ≥3   0.0%
+  hflip  n=100: prefix of the reversed word ≥2  21.0%  ≥3  10.0% | prefix of the word ≥2  54.0%  ≥3  52.0% | control (another word reversed) ≥2   2.0%  ≥3   0.0%

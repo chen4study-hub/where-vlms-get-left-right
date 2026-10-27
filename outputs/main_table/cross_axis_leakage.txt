@@ -1,0 +1,24 @@
+[vit_w→ud all items] internvl3-2b-hf=14.6 (n=267)  internvl3-8b-hf=8.6 (n=267)  qwen2.5-vl-3b-instruct=11.2 (n=267)  qwen2.5-vl-7b-instruct=8.6 (n=267)
+    internvl3-8b-hf − internvl3-2b-hf: -6.0 [-11.2, -0.8]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -3.4 [-9.0, +2.3]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: -6.0 [-10.8, -1.2]
+[vit_w→ud geometry-consistent] internvl3-2b-hf=7.8 (n=193)  internvl3-8b-hf=3.9 (n=231)  qwen2.5-vl-3b-instruct=4.4 (n=182)  qwen2.5-vl-7b-instruct=5.1 (n=234)
+    internvl3-8b-hf − internvl3-2b-hf: -3.9 [-8.0, +0.1]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -3.4 [-8.4, +1.5]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: -2.6 [-6.9, +1.4]
+[vit_h→lr all items] internvl3-2b-hf=25.6 (n=383)  internvl3-8b-hf=15.4 (n=383)  qwen2.5-vl-3b-instruct=16.2 (n=383)  qwen2.5-vl-7b-instruct=11.7 (n=383)
+    internvl3-8b-hf − internvl3-2b-hf: -10.2 [-15.4, -5.0]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -9.4 [-14.7, -4.0]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: -13.8 [-19.0, -8.7]
+[vit_h→lr geometry-consistent] internvl3-2b-hf=15.5 (n=245)  internvl3-8b-hf=12.0 (n=334)  qwen2.5-vl-3b-instruct=10.8 (n=241)  qwen2.5-vl-7b-instruct=8.2 (n=318)
+    internvl3-8b-hf − internvl3-2b-hf: -3.5 [-8.6, +1.5]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -4.7 [-10.8, +1.3]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: -7.3 [-12.7, -2.1]
+[vit_w→lr geometry-consistent (same axis)] internvl3-2b-hf=88.5 (n=244)  internvl3-8b-hf=95.5 (n=335)  qwen2.5-vl-3b-instruct=83.3 (n=186)  qwen2.5-vl-7b-instruct=95.4 (n=327)
+    internvl3-8b-hf − internvl3-2b-hf: +7.0 [+2.7, +11.4]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -5.2 [-11.4, +0.9]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: +6.9 [+2.5, +11.3]
+[vit_h→ud geometry-consistent (same axis)] internvl3-2b-hf=69.8 (n=96)  internvl3-8b-hf=48.1 (n=162)  qwen2.5-vl-3b-instruct=45.5 (n=88)  qwen2.5-vl-7b-instruct=51.4 (n=173)
+    internvl3-8b-hf − internvl3-2b-hf: -21.6 [-32.6, -10.4]
+    qwen2.5-vl-3b-instruct − internvl3-2b-hf: -24.3 [-37.3, -10.9]
+    qwen2.5-vl-7b-instruct − internvl3-2b-hf: -18.3 [-29.0, -7.5]

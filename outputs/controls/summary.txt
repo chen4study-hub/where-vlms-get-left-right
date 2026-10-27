@@ -1,0 +1,38 @@
+[reproduction] 3b: re-run in the original order, 57 rows, same prediction as the main table 57/57, max log-probability difference 0.0000
+[reproduction] 7b: re-run in the original order, 57 rows, same prediction as the main table 57/57, max log-probability difference 0.0000
+
+== Swapped option order: 3b (original order = main table; ties original 754 / swapped 721)
+  agree_vit_w_hflip_lr   original  87.5 (n=383)  swapped  86.4 (n=383)  diff  -1.0 [-4.4, +2.2]
+  flip_vit_w_lr          original  83.3 (n=186)  swapped  85.6 (n=216)  diff  +2.3 [-2.5, +7.1]
+  flip_llm_w_lr          original   0.5 (n=186)  swapped   1.4 (n=216)  diff  +0.9 [-1.0, +2.8]
+  flip_vit_h_ud          original  45.5 (n=88)  swapped  58.9 (n=90)  diff +13.4 [+1.2, +25.8]
+  flip_llm_h_ud          original   9.1 (n=88)  swapped   7.8 (n=90)  diff  -1.3 [-8.6, +6.1]
+  flip_vit_w_ud          original   4.4 (n=182)  swapped   9.0 (n=199)  diff  +4.6 [-0.3, +9.8]
+  split by the original answer (original order, geometry-consistent left-right items, vit_w flips): word=left 62.2% (n=82); word=right 100.0% (n=104); letter=A 62.2% (n=82); letter=B 100.0% (n=104)
+  split by the original answer (swapped, geometry-consistent left-right items, vit_w flips): word=left 68.7% (n=99); word=right 100.0% (n=117); letter=A 100.0% (n=117); letter=B 68.7% (n=99)
+
+== Swapped option order: 7b (original order = main table; ties original 239 / swapped 258)
+  agree_vit_w_hflip_lr   original  93.2 (n=383)  swapped  89.3 (n=383)  diff  -3.9 [-6.6, -1.3]
+  flip_vit_w_lr          original  95.4 (n=327)  swapped  91.7 (n=313)  diff  -3.7 [-6.3, -1.2]
+  flip_llm_w_lr          original   0.3 (n=327)  swapped   0.6 (n=313)  diff  +0.3 [-0.6, +1.5]
+  flip_vit_h_ud          original  51.4 (n=173)  swapped  54.5 (n=178)  diff  +3.0 [-4.4, +10.4]
+  flip_llm_h_ud          original  12.1 (n=173)  swapped  10.7 (n=178)  diff  -1.5 [-6.5, +3.5]
+  flip_vit_w_ud          original   5.1 (n=234)  swapped   6.2 (n=225)  diff  +1.1 [-2.0, +4.4]
+  split by the original answer (original order, geometry-consistent left-right items, vit_w flips): word=left 92.8% (n=152); word=right 97.7% (n=175); letter=A 92.8% (n=152); letter=B 97.7% (n=175)
+  split by the original answer (swapped, geometry-consistent left-right items, vit_w flips): word=left 84.5% (n=148); word=right 98.2% (n=165); letter=A 98.2% (n=165); letter=B 84.5% (n=148)
+
+quantities that move by more than 5 points with the options swapped: 3b:flip_vit_h_ud
+
+== CV-Bench Count: 3b (n = 788)
+  accuracy: orig 68.3  hflip 68.3  vit_w 52.7  vit_h 45.4  llm_w 68.4
+  hflip  drop  +0.0 [-2.2, +2.2]  answers changed 13.3%
+  vit_w  drop +15.6 [+12.2, +19.0]  answers changed 34.8%
+  vit_h  drop +22.8 [+19.2, +26.5]  answers changed 44.2%
+  llm_w  drop  -0.1 [-0.8, +0.4]  answers changed 1.3%
+
+== CV-Bench Count: 7b (n = 788)
+  accuracy: orig 67.3  hflip 67.3  vit_w 49.0  vit_h 41.4  llm_w 67.4
+  hflip  drop  +0.0 [-2.3, +2.2]  answers changed 13.8%
+  vit_w  drop +18.3 [+14.7, +21.8]  answers changed 36.3%
+  vit_h  drop +25.9 [+22.1, +29.7]  answers changed 45.7%
+  llm_w  drop  -0.1 [-0.5, +0.3]  answers changed 0.8%

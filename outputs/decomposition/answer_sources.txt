@@ -1,0 +1,24 @@
+
+== qwen3b (650 items)
+  lr all                  (n=383): position  46.7%  content   0.3%  neither  53.0%
+  lr changed by real flip (n=207): position  81.6%  content   0.0%  neither  18.4%
+  lr blank image: accuracy 47.5%, answers left 99.7%, right 0.3%
+  ud all                  (n=267): position  27.7%  content  14.2%  neither  58.1%
+  ud changed by real flip (n=107): position  47.7%  content  13.1%  neither  39.3%
+  ud blank image: accuracy 64.4%, answers above 49.1%, below 50.9%
+
+== qwen7b (650 items)
+  lr all                  (n=383): position  89.3%  content   2.6%  neither   8.1%
+  lr changed by real flip (n=350): position  95.1%  content   1.4%  neither   3.4%
+  lr blank image: accuracy 48.3%, answers left 95.8%, right 4.2%
+  ud all                  (n=267): position  42.7%  content   4.5%  neither  52.8%
+  ud changed by real flip (n=185): position  54.6%  content   4.9%  neither  40.5%
+  ud blank image: accuracy 73.8%, answers above 59.9%, below 40.1%
+
+== internvl3-2b (650 items)
+  lr all                  (n=383): position  77.0%  content   9.4%  neither  13.6%
+  lr changed by real flip (n=307): position  88.3%  content   5.5%  neither   6.2%
+  lr blank image: accuracy 52.2%, answers left 67.4%, right 32.6%
+  ud all                  (n=267): position  38.2%  content  21.0%  neither  40.8%
+  ud changed by real flip (n=117): position  66.7%  content  14.5%  neither  18.8%
+  ud blank image: accuracy 62.2%, answers above 22.8%, below 77.2%

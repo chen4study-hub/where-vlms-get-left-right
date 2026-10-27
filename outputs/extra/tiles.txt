@@ -1,0 +1,7 @@
+== Fixed layouts, left-right questions
+ties (still exactly equal in fp32; accuracy counts 0.5, paired comparisons count them as wrong): 0
+condition     lr accuracy
+S             73.1% n=108
+H-T           66.7% n=108
+H-T_swap      63.0% n=108
+  H-T_swap vs H-T (lr): Δacc -3.7 points, Δm -0.643 [-0.901, -0.395], net fixes -4

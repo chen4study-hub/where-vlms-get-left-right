@@ -1,0 +1,69 @@
+== Reproduction: conditions re-run here compared row by row with the main-run predictions (orig re-run on every item; the mirrors on the first 8 items only)
+  q3b    cv2d     orig          same 650/650  max diff 0.0000
+  q3b    cv2d     vit_w_mirror  same 8/8  max diff 0.0000
+  q3b    cv2d     vit_h_mirror  same 8/8  max diff 0.0000
+  q3b    whatsup  orig          same 412/412  max diff 0.0000
+  q3b    whatsup  vit_w_mirror  same 8/8  max diff 0.0000
+  q3b    depth    orig          same 314/314  max diff 0.0000
+  q7b    cv2d     orig          same 650/650  max diff 0.0000
+  q7b    cv2d     vit_w_mirror  same 8/8  max diff 0.0000
+  q7b    cv2d     vit_h_mirror  same 8/8  max diff 0.0000
+  q7b    whatsup  orig          same 412/412  max diff 0.0000
+  q7b    whatsup  vit_w_mirror  same 8/8  max diff 0.0000
+  q7b    depth    orig          same 314/314  max diff 0.0000
+  ivl2b  cv2d     orig          same 650/650  max diff 0.0000
+  ivl2b  cv2d     vit_w_mirror  same 8/8  max diff 0.0000
+  ivl2b  cv2d     llm_w         same 8/8  max diff 0.0000
+  ivl2b  whatsup  orig          same 412/412  max diff 0.0000
+  ivl2b  whatsup  vit_w_mirror  same 8/8  max diff 0.0000
+
+== Same-axis non-mirror permutations on the ViT side (geometry-consistent subset; flip = change relative to the main-run orig; permutation = max(shift, mean of the three shuf seeds))
+  cv2d    q3b    lr  n=186  mirror  83.3  shift  80.1  shuf  52.3  diff   3.2 [-3.2, 10.2]
+      by gold: left n=82 mirror  62.2 permutation  57.3; right n=104 mirror 100.0 permutation  98.1; off-axis permutations shift   8.1 shuf0  16.1 shuf1  15.1 shuf2  15.6; diff without ties   4.8 (n=146)
+  cv2d    q3b    ud  n= 88  mirror  45.5  shift  35.2  shuf  28.0  diff  10.2 [-1.1, 21.2]
+      by gold: above n=36 mirror  58.3 permutation  37.0; below n=52 mirror  36.5 permutation  34.6; off-axis permutations shift   5.7 shuf0   5.7 shuf1   6.8 shuf2   8.0; diff without ties  11.1 (n=54)
+  cv2d    q7b    lr  n=327  mirror  95.4  shift  80.4  shuf  47.6  diff  15.0 [10.4, 19.6]
+      by gold: left n=152 mirror  92.8 permutation  73.0; right n=175 mirror  97.7 permutation  86.9; off-axis permutations shift   1.8 shuf0   3.4 shuf1   4.6 shuf2   2.8; diff without ties  13.5 (n=296)
+  cv2d    q7b    ud  n=173  mirror  51.4  shift  31.2  shuf  18.5  diff  20.2 [12.7, 27.7]
+      by gold: above n=89 mirror  51.7 permutation  34.8; below n=84 mirror  51.2 permutation  27.4; off-axis permutations shift   4.0 shuf0   5.8 shuf1   4.0 shuf2   4.0; diff without ties  20.5 (n=146)
+  cv2d    ivl2b  lr  n=244  mirror  88.5  shift  84.0  shuf  58.9  diff   4.5 [-0.8, 9.8]
+      by gold: left n=110 mirror  85.5 permutation  77.3; right n=134 mirror  91.0 permutation  89.6; off-axis permutations shift   7.4 shuf0  10.2 shuf1  12.3 shuf2   7.4; diff without ties   3.4 (n=204)
+  cv2d    ivl2b  ud  n= 96  mirror  69.8  shift  38.5  shuf  43.1  diff  26.7 [16.0, 36.1]
+      by gold: above n=45 mirror  64.4 permutation  48.9; below n=51 mirror  74.5 permutation  41.8; off-axis permutations shift   9.4 shuf0  11.5 shuf1  11.5 shuf2  12.5; diff without ties  32.3 (n=65)
+  whatsup q3b    lr  n=192  mirror 100.0  shift  94.3  shuf  65.8  diff   5.7 [2.6, 9.4]
+      by gold: left n=96 mirror 100.0 permutation  88.5; right n=96 mirror 100.0 permutation 100.0; off-axis permutations shift   8.9 shuf0  13.0 shuf1  16.7 shuf2  10.4; diff without ties   5.7 (n=192)
+      share of changed items that change to the mirror relation: mirror  82.3 (changed 192)  shift  83.4 (changed 181)  shuf0  38.6 (changed 145)  shuf1  30.8 (changed 107)  shuf2  26.0 (changed 127)
+  whatsup q3b    ud  n=105  mirror  83.8  shift   5.7  shuf  26.3  diff  57.5 [48.6, 66.0]
+      by gold: on n=66 mirror  93.9 permutation  17.7; under n=39 mirror  66.7 permutation  41.0; off-axis permutations shift  73.3 shuf0  47.6 shuf1  28.6 shuf2  22.9; diff without ties  57.5 (n=105)
+      share of changed items that change to the mirror relation: mirror  96.6 (changed 88)  shift  33.3 (changed 6)  shuf0 100.0 (changed 24)  shuf1  94.6 (changed 37)  shuf2  86.4 (changed 22)
+  whatsup q7b    lr  n=154  mirror 100.0  shift  99.4  shuf  81.8  diff   0.6 [0.0, 1.9]
+      by gold: left n=81 mirror 100.0 permutation 100.0; right n=73 mirror 100.0 permutation  98.6; off-axis permutations shift   5.2 shuf0  16.9 shuf1  25.3 shuf2  23.4; diff without ties   0.6 (n=154)
+      share of changed items that change to the mirror relation: mirror  72.1 (changed 154)  shift  67.3 (changed 153)  shuf0  13.1 (changed 130)  shuf1   7.0 (changed 114)  shuf2   5.2 (changed 134)
+  whatsup q7b    ud  n= 99  mirror  80.8  shift   9.1  shuf  32.3  diff  48.5 [39.1, 57.6]
+      by gold: on n=64 mirror  96.9 permutation  33.3; under n=35 mirror  51.4 permutation  30.5; off-axis permutations shift  26.3 shuf0  15.2 shuf1   9.1 shuf2  12.1; diff without ties  48.5 (n=99)
+      share of changed items that change to the mirror relation: mirror  98.8 (changed 80)  shift 100.0 (changed 9)  shuf0 100.0 (changed 34)  shuf1 100.0 (changed 41)  shuf2 100.0 (changed 21)
+  whatsup ivl2b  lr  n=196  mirror  99.0  shift  99.5  shuf  42.0  diff  -0.5 [-2.6, 1.0]
+      by gold: left n=98 mirror 100.0 permutation 100.0; right n=98 mirror  98.0 permutation  99.0; off-axis permutations shift   2.0 shuf0  11.7 shuf1  15.8 shuf2  17.3; diff without ties  -0.5 (n=196)
+      share of changed items that change to the mirror relation: mirror  95.9 (changed 194)  shift  96.9 (changed 195)  shuf0  40.0 (changed 35)  shuf1  83.5 (changed 121)  shuf2  67.0 (changed 91)
+  whatsup ivl2b  ud  n= 68  mirror  77.9  shift  11.8  shuf  44.6  diff  33.3 [21.1, 45.1]
+      by gold: on n=32 mirror  84.4 permutation  43.8; under n=36 mirror  72.2 permutation  45.4; off-axis permutations shift  58.8 shuf0  54.4 shuf1  45.6 shuf2  54.4; diff without ties  33.3 (n=68)
+      share of changed items that change to the mirror relation: mirror  67.9 (changed 53)  shift  25.0 (changed 8)  shuf0  74.4 (changed 39)  shuf1  69.6 (changed 23)  shuf2  86.2 (changed 29)
+
+== Depth, held-out half (change rate relative to the main-run orig, ties not counted; direction = share of the changed non-ambiguous items that now call the object higher in the image the closer one)
+  q3b  vit_h n=314  mirror  37.3  shift  23.6  shuf  17.0  diff  13.7 [8.6, 18.8]  direction: mirror  95.7 (changed 92)  permutation  97.2 (changed rows 179)  diff  -1.6 [-5.1, 1.2]
+  q3b  vit_w n=314  mirror  27.1  shift  20.4  shuf  15.9  diff   6.7 [2.2, 11.1]  direction: mirror  66.7 (changed 57)  permutation  49.2 (changed rows 120)  diff  17.5 [7.2, 27.4]
+       vflip n=314  change rate  39.5  direction  99.0 (changed 103)  same as the new vflip answer: vit_h  74.4 (changed 117)  height permutations  82.9 (changed rows 234)  diff  -8.5 [-15.6, -1.3]
+  q7b  vit_h n=314  mirror  43.9  shift  22.6  shuf  22.1  diff  21.3 [15.0, 26.0]  direction: mirror  95.2 (changed 105)  permutation  94.0 (changed rows 201)  diff   1.2 [-4.4, 7.3]
+  q7b  vit_w n=314  mirror  19.7  shift  15.9  shuf  16.9  diff   2.9 [-1.9, 6.9]  direction: mirror  80.0 (changed 40)  permutation  50.0 (changed rows 102)  diff  30.0 [17.6, 42.3]
+       vflip n=314  change rate  36.6  direction 100.0 (changed 86)  same as the new vflip answer: vit_h  64.5 (changed 138)  height permutations  71.7 (changed rows 279)  diff  -7.2 [-15.1, 1.0]
+
+== ViT width position code neutralized (Qwen constant ids, InternVL averaged over the width): does the LLM side alone carry left-right?
+  q3b    left-right accuracy orig  73.1 → neutralized  48.0 [43.1, 53.0] (neutralized + hflip  52.5); up-down orig  74.2 → neutralized  79.0; geometry-consistent left-right items after neutralizing 3
+      flips (relative to neutralized): neu_llm_w 1/3  33.3 [6.1, 79.2]  neu_order_only_w 0/3   0.0 [0.0, 56.2]  neu_order_and_id_w 1/3  33.3 [6.1, 79.2]
+  q7b    left-right accuracy orig  90.1 → neutralized  50.1 [45.1, 55.1] (neutralized + hflip  54.3); up-down orig  89.5 → neutralized  87.3; geometry-consistent left-right items after neutralizing 47
+      flips (relative to neutralized): neu_llm_w 3/47   6.4 [2.2, 17.2]  neu_order_only_w 12/47  25.5 [15.3, 39.5]  neu_order_and_id_w 14/47  29.8 [18.7, 44.0]
+  ivl2b  left-right accuracy orig  72.1 → neutralized  49.9 [44.9, 54.9] (neutralized + hflip  52.5); up-down orig  78.3 → neutralized  72.7; geometry-consistent left-right items after neutralizing 44
+      flips (relative to neutralized): neu_llm_w 9/44  20.5 [11.2, 34.5]  neu_order_only_w 13/44  29.5 [18.2, 44.2]  neu_order_and_id_w 13/44  29.5 [18.2, 44.2]
+
+== InternVL3-2B order-only (ViT position code intact; geometry-consistent subset, relative to the main-run orig)
+  order_only_w 5/244   2.0 [0.9, 4.7]  order_and_id_w 3/244   1.2 [0.4, 3.6]  order_only_h 9/96   9.4 [5.0, 16.9]  order_and_id_h 8/96   8.3 [4.3, 15.6]

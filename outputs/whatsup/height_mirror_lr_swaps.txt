@@ -1,0 +1,9 @@
+qwen25vl3b.jsonl     vit_h: left-right swaps 8/192 = 4.2% [2.1, 8.0]; changed answers go to {'under': 86, 'left': 8, 'on': 3}
+qwen25vl3b.jsonl     llm_h: left-right swaps 0/192 = 0.0% [0.0, 2.0]; changed answers go to {'under': 1}
+qwen25vl7b.jsonl     vit_h: left-right swaps 1/154 = 0.6% [0.1, 3.6]; changed answers go to {'under': 88, 'on': 4, 'left': 1}
+qwen25vl7b.jsonl     llm_h: left-right swaps 0/154 = 0.0% [0.0, 2.4]; changed answers go to {}
+internvl32b.jsonl    vit_h: left-right swaps 33/196 = 16.8% [12.2, 22.7]; changed answers go to {'on': 21, 'left': 20, 'under': 20, 'right': 13}
+internvl32b.jsonl    llm_h: left-right swaps 1/196 = 0.5% [0.1, 2.8]; changed answers go to {'on': 1, 'under': 3, 'left': 1}
+internvl38b.jsonl    vit_h: left-right swaps 1/155 = 0.6% [0.1, 3.6]; changed answers go to {'under': 109, 'right': 1}
+internvl38b.jsonl    llm_h: left-right swaps 0/155 = 0.0% [0.0, 2.4]; changed answers go to {'under': 4}
+vit_h left-right swaps 8B − 2B: -16.2 [-21.7, -10.8] (412 items resampled jointly 10000 times, seed 0)

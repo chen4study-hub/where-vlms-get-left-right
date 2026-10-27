@@ -1,0 +1,10 @@
+== emb_3b.jsonl  n=1057
+  heuristic-following items (n=476) moved to the opposite end under vit_h  21.2%
+  heuristic-following items (n=476) moved to the opposite end under vit_w  12.8%
+  heuristic-following items (n=476) moved to the opposite end under llm_h   2.5%
+  vit_h − vit_w = +8.4 points [+4.4, +12.4]
+== emb_7b.jsonl  n=1057
+  heuristic-following items (n=520) moved to the opposite end under vit_h  18.7%
+  heuristic-following items (n=520) moved to the opposite end under vit_w  10.4%
+  heuristic-following items (n=520) moved to the opposite end under llm_h   3.7%
+  vit_h − vit_w = +8.3 points [+4.6, +12.1]

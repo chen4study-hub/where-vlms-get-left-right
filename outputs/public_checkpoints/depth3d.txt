@@ -1,0 +1,15 @@
+
+== base
+  3D Depth (val + test) not ambiguous 423 (of 600): rule 84.9  model 83.0  agrees with the rule 81.6  on the 64 items where the rule is wrong, model 54.7
+
+== spatialladder-3b
+  3D Depth (val + test) not ambiguous 423 (of 600): rule 84.9  model 80.9  agrees with the rule 82.3  on the 64 items where the rule is wrong, model 45.3
+
+== spaceqwen2.5-vl-3b-instruct
+  3D Depth (val + test) not ambiguous 423 (of 600): rule 84.9  model 86.1  agrees with the rule 86.1  on the 64 items where the rule is wrong, model 50.0
+
+== spacer-3b
+  3D Depth (val + test) not ambiguous 423 (of 600): rule 84.9  model 83.2  agrees with the rule 83.2  on the 64 items where the rule is wrong, model 50.0
+
+== qwen2.5vl-3b-vlm-r1-rec-500steps
+  3D Depth (val + test) not ambiguous 423 (of 600): rule 84.9  model 85.6  agrees with the rule 83.7  on the 64 items where the rule is wrong, model 56.2

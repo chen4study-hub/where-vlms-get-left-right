@@ -1,0 +1,8 @@
+=== results/token_order/row_order_qwen2.5-vl-7b-instruct.jsonl  up-down items 267, geometry-consistent subset 173
+  order_only_h       all                :  18.7% [15,24] n=267
+  order_only_h       geometry-consistent:  20.8% [15,27] n=173
+  order_rowshift     all                :  13.5% [10,18] n=267
+  order_rowshift     geometry-consistent:  11.6% [8,17] n=173
+  order_rowshuffle×3 all                :  11.1% [9,13] n=801
+  order_rowshuffle×3 geometry-consistent:  11.2% [9,14] n=519
+  same direction: of the 50 items flipped by order_only_h, also flipped by vflip 40 (80.0%)

@@ -1,0 +1,26 @@
+== 7b: items 248; status ambiguous 65, no_switch_ref 33, ok 131, orig_wrong 19
+  vit_w usable items 131
+    classes (first that fits: switch, same, hflip_raw, mirror_coords; else unmatched): switch 6 (4.6%)  same 13 (9.9%)  hflip_raw 66 (50.4%)  mirror_coords 2 (1.5%)  unmatched 43 (32.8%)  none 1 (0.8%)
+    combinations of classes that fit (cross table): hflip_raw 66  unmatched 43  same 8  same+hflip_raw 5  switch+hflip_raw 4  mirror_coords 2  switch 2
+  llm_w usable items 131
+    classes (first that fits: switch, same, hflip_raw, mirror_coords; else unmatched): same 131 (100.0%)
+    combinations of classes that fit (cross table): same 119  same+mirror_coords 7  same+hflip_raw 5
+  coincides with the raw H-flip box (IoU ≥ 0.5), usable items n=131: orig 5/131   3.8% [1.6, 8.6]  vit_w 75/131  57.3% [48.7, 65.4]  llm_w 5/131   3.8% [1.6, 8.6]
+    vit_w − orig: +53.4 [+44.3, +62.6] points (paired bootstrap B=10000)
+    vit_w − llm_w: +53.4 [+44.3, +62.6] points (paired bootstrap B=10000)
+  coincides with the raw H-flip box (IoU ≥ 0.5), all items with a correct orig box n=229: orig 63/229  27.5% [22.1, 33.6]  vit_w 141/229  61.6% [55.1, 67.6]  llm_w 64/229  27.9% [22.5, 34.1]
+    vit_w − orig: +34.1 [+26.2, +41.9] points (paired bootstrap B=10000)
+    vit_w − llm_w: +33.6 [+25.8, +41.5] points (paired bootstrap B=10000)
+== 3b: items 248; status ambiguous 66, no_switch_ref 27, ok 140, orig_wrong 15
+  vit_w usable items 140
+    classes (first that fits: switch, same, hflip_raw, mirror_coords; else unmatched): switch 6 (4.3%)  same 12 (8.6%)  hflip_raw 66 (47.1%)  mirror_coords 2 (1.4%)  unmatched 54 (38.6%)
+    combinations of classes that fit (cross table): hflip_raw 66  unmatched 54  same+hflip_raw 9  switch+hflip_raw 4  same 3  mirror_coords 2  switch 2
+  llm_w usable items 140
+    classes (first that fits: switch, same, hflip_raw, mirror_coords; else unmatched): same 140 (100.0%)
+    combinations of classes that fit (cross table): same 126  same+hflip_raw 8  same+mirror_coords 6
+  coincides with the raw H-flip box (IoU ≥ 0.5), usable items n=140: orig 8/140   5.7% [2.9, 10.9]  vit_w 79/140  56.4% [48.2, 64.4]  llm_w 8/140   5.7% [2.9, 10.9]
+    vit_w − orig: +50.7 [+41.4, +59.3] points (paired bootstrap B=10000)
+    vit_w − llm_w: +50.7 [+41.4, +59.3] points (paired bootstrap B=10000)
+  coincides with the raw H-flip box (IoU ≥ 0.5), all items with a correct orig box n=233: orig 69/233  29.6% [24.1, 35.8]  vit_w 132/233  56.7% [50.2, 62.9]  llm_w 68/233  29.2% [23.7, 35.3]
+    vit_w − orig: +27.0 [+19.7, +34.8] points (paired bootstrap B=10000)
+    vit_w − llm_w: +27.5 [+20.2, +35.2] points (paired bootstrap B=10000)

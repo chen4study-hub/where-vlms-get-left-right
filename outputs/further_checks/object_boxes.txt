@@ -1,0 +1,2 @@
+== Boxes of the two objects: CV-Bench 2D Relation COCO 359 items -> 347 mapped
+  dropped: no red box and A not unique 1; red box not matched to exactly one instance of A 11

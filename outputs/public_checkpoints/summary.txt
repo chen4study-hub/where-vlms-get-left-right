@@ -1,0 +1,33 @@
+
+== base (Qwen2.5-VL-3B)
+  orig accuracy 76.1% (left-right 74.7, up-down 78.1; both option orders); first option chosen 47.0%; ties 0
+  lr agreement (ViT positions mirrored vs real flip): 79.6% [73.8, 84.3] (n=225; options swapped 81.3%)
+  left-right items, llm_w change rate 0.0%
+
+== spatialladder-3b
+  orig accuracy 84.1% (left-right 81.7, up-down 87.5; both option orders); first option chosen 49.0%; ties 0
+  lr agreement (ViT positions mirrored vs real flip): 87.5% [83.1, 90.8] (n=279; options swapped 85.9%)
+  left-right items, llm_w change rate 0.0%
+  relative to the base: gain +8.0 [+5.9, +10.0]
+  generation check: 30 items, parsed 30, agrees with the logit answer 100.0%
+
+== spaceqwen2.5-vl-3b-instruct
+  orig accuracy 72.9% (left-right 68.7, up-down 79.0; both option orders); first option chosen 51.4%; ties 0
+  lr agreement (ViT positions mirrored vs real flip): 81.6% [74.3, 87.2] (n=136; options swapped 82.2%)
+  left-right items, llm_w change rate 0.8%
+  relative to the base: gain -3.2 [-4.8, -1.5]
+  generation check: 30 items, parsed 30, agrees with the logit answer 100.0%
+
+== spacer-3b
+  orig accuracy 75.2% (left-right 74.5, up-down 76.2; both option orders); first option chosen 48.9%; ties 0
+  lr agreement (ViT positions mirrored vs real flip): 77.3% [71.1, 82.6] (n=203; options swapped 82.5%)
+  left-right items, llm_w change rate 0.3%
+  relative to the base: gain -0.8 [-1.9, +0.2]
+  generation check: 30 items, parsed 30, agrees with the logit answer 93.3%
+
+== qwen2.5vl-3b-vlm-r1-rec-500steps
+  orig accuracy 77.8% (left-right 77.3, up-down 78.7; both option orders); first option chosen 45.2%; ties 0
+  lr agreement (ViT positions mirrored vs real flip): 83.9% [78.8, 87.9] (n=254; options swapped 83.0%)
+  left-right items, llm_w change rate 1.6%
+  relative to the base: gain +1.8 [+0.8, +2.8]
+  generation check: 30 items, parsed 26, agrees with the logit answer 80.0%

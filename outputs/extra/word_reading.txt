@@ -1,0 +1,26 @@
+
+== 7B
+  reading orig  : correct 100.0%  reversed   0.0%  (n=100)
+  reading vit_w : correct   0.0%  reversed   0.0%  (n=100)
+  reading hflip : correct  52.0%  reversed   5.0%  (n=100)
+    vit_w misread: garden → 'indianaggs' (other)
+    vit_w misread: window → 'modarim' (other)
+    vit_w misread: silver → 'revisit' (other)
+    vit_w misread: planet → 'tendabji' (other)
+    vit_w misread: market → 'teklami' (other)
+    vit_w misread: winter → 'rethink' (other)
+    vit_w misread: rocket → 'Tekoar' (other)
+    vit_w misread: bridge → 'eggplant' (other)
+
+== 3B
+  reading orig  : correct 100.0%  reversed   0.0%  (n=100)
+  reading vit_w : correct   0.0%  reversed   2.0%  (n=100)
+  reading hflip : correct  45.0%  reversed   3.0%  (n=100)
+    vit_w misread: garden → 'beggars' (other)
+    vit_w misread: window → 'modariv' (other)
+    vit_w misread: silver → 'reviss' (other)
+    vit_w misread: planet → 'tenday' (other)
+    vit_w misread: market → 'teknami' (other)
+    vit_w misread: winter → 'ceethri' (other)
+    vit_w misread: rocket → 'tekocor' (other)
+    vit_w misread: bridge → 'eggsandbake' (other)

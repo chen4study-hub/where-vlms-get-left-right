@@ -1,0 +1,53 @@
+
+=== results/main_table/internvl3-2b/internvl3-2b-hf.jsonl  items 650
+-- accuracy (against the answer implied by the geometry)
+  orig        lr:  72.1% [67%,76%] n=383
+  orig        ud:  78.3% [73%,83%] n=267
+  swap        lr:  66.1% [61%,71%] n=383
+  swap        ud:  73.4% [68%,78%] n=267
+  hflip       lr:  75.2% [71%,79%] n=383
+  hflip       ud:  75.7% [70%,80%] n=267
+  vflip       lr:  71.8% [67%,76%] n=383
+  vflip       ud:  49.8% [44%,56%] n=267
+  rot180      lr:  70.2% [65%,75%] n=383
+  rot180      ud:  53.2% [47%,59%] n=267
+-- self-contradiction rate (logically inconsistent with the orig prediction, gold not used)
+  orig↔swap       lr:  57.7% [53%,63%] n=383
+  orig↔swap       ud:  44.6% [39%,51%] n=267
+  orig↔hflip      lr:  19.8% [16%,24%] n=383
+  orig↔hflip      ud:   9.4% [6%,13%] n=267
+  orig↔vflip      lr:  15.9% [13%,20%] n=383
+  orig↔vflip      ud:  56.2% [50%,62%] n=267
+-- position flips: share of answers that change relative to the base variant (lr items: _w, ud items: _h; the other axis is the control and should be near 0)
+   positions only (base orig): how far left-right / up-down follow the position ids;
+   pixels flipped + positions flipped back (base hflip / vflip): how many answers flip back
+  orig→llm_w       lr:   4.2% [3%,7%] n=383
+  orig→llm_w       ud:   3.4% [2%,6%] n=267
+  orig→vit_w       lr:  77.0% [73%,81%] n=383
+  orig→vit_w       ud:  14.6% [11%,19%] n=267
+  orig→both_w      lr:  74.7% [70%,79%] n=383
+  orig→both_w      ud:  15.4% [12%,20%] n=267
+  orig→llm_h       lr:   7.8% [6%,11%] n=383
+  orig→llm_h       ud:   3.4% [2%,6%] n=267
+  orig→vit_h       lr:  25.6% [21%,30%] n=383
+  orig→vit_h       ud:  38.2% [33%,44%] n=267
+  orig→both_h      lr:  25.1% [21%,30%] n=383
+  orig→both_h      ud:  42.7% [37%,49%] n=267
+  hflip→hflip_llm_w lr:   4.7% [3%,7%] n=383
+  hflip→hflip_llm_w ud:   5.2% [3%,9%] n=267
+  hflip→hflip_vit_w lr:  77.0% [73%,81%] n=383
+  hflip→hflip_vit_w ud:  15.0% [11%,20%] n=267
+  hflip→hflip_both_w lr:  76.0% [71%,80%] n=383
+  hflip→hflip_both_w ud:  13.5% [10%,18%] n=267
+  vflip→vflip_llm_h lr:   6.8% [5%,10%] n=383
+  vflip→vflip_llm_h ud:   9.0% [6%,13%] n=267
+  vflip→vflip_vit_h lr:  21.9% [18%,26%] n=383
+  vflip→vflip_vit_h ud:  38.6% [33%,45%] n=267
+  vflip→vflip_both_h lr:  23.5% [20%,28%] n=383
+  vflip→vflip_both_h ud:  38.2% [33%,44%] n=267
+  rot180→ids_rot180  lr:  23.8% [20%,28%] n=383
+  rot180→ids_rot180  ud:  31.5% [26%,37%] n=267
+  orig→ids_rot180  lr:  61.4% [56%,66%] n=383
+  orig→ids_rot180  ud:  36.7% [31%,43%] n=267
+-- accuracy against the gold label and confidence (orig)
+  orig acc  74.6% [71%,78%] n=650  mean confidence 0.78

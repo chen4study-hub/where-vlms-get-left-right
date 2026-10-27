@@ -1,0 +1,5 @@
+== Shared source images: Depth, 600 items, 508 source images (600 distinct CV-Bench filenames)
+  validation half 286 items, held-out half 314 items
+  source images shared by the two halves 35, covering 88 items: held-out half 45, validation half 43
+  test half, items with a shared source image by group: ambiguous 6, consistent 38, counter 1
+  val half, items with a shared source image by group: ambiguous 4, consistent 33, counter 6

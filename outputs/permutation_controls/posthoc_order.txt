@@ -1,0 +1,6 @@
+cv2d    q3b    lr n=186  A. shuf/mirror = 0.63 [0.56, 0.69] (≈ 0.5 if only the order counts)  B. shift changes 149 items: also changed by the mirror 88%, to the mirror's answer 88%
+cv2d    q7b    lr n=327  A. shuf/mirror = 0.50 [0.46, 0.54] (≈ 0.5 if only the order counts)  B. shift changes 263 items: also changed by the mirror 96%, to the mirror's answer 96%
+cv2d    ivl2b  lr n=244  A. shuf/mirror = 0.67 [0.62, 0.71] (≈ 0.5 if only the order counts)  B. shift changes 205 items: also changed by the mirror 92%, to the mirror's answer 92%
+whatsup q3b    lr n=192  A. shuf/mirror = 0.66 [0.61, 0.71] (≈ 0.5 if only the order counts)  B. shift changes 181 items: also changed by the mirror 100%, to the mirror's answer 69%
+whatsup q7b    lr n=154  A. shuf/mirror = 0.82 [0.77, 0.86] (≈ 0.5 if only the order counts)  B. shift changes 153 items: also changed by the mirror 100%, to the mirror's answer 50%
+whatsup ivl2b  lr n=196  A. shuf/mirror = 0.42 [0.38, 0.47] (≈ 0.5 if only the order counts)  B. shift changes 195 items: also changed by the mirror 99%, to the mirror's answer 94%

@@ -1,0 +1,46 @@
+== Object order: CV-Bench 2D Relation COCO items, 347 mapped; geometry-consistent subset; flips relative to the main-run orig; cluster bootstrap (by item) B=10000 seed 0
+
+-- left-right items (width permutations vit_w_*)
+  q3b   pooled   items 117  reversed n=250 flips  71.6  kept n=218 flips  44.0  Δ  27.6 [18.4, 36.4]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  83.8  off-axis permutations   8.5
+  q3b   shift    items 117  reversed n=96 flips  88.5  kept n=21 flips  61.9  Δ  26.6 [5.5, 49.4]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  83.8  off-axis permutations   8.5
+  q3b   shuf×3   items 117  reversed n=154 flips  61.0  kept n=197 flips  42.1  Δ  18.9 [8.7, 28.8]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  83.8  off-axis permutations   8.5
+  q7b   pooled   items 191  reversed n=429 flips  71.6  kept n=335 flips  32.5  Δ  39.0 [33.0, 45.0]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  96.3  off-axis permutations   2.4
+  q7b   shift    items 191  reversed n=151 flips  88.7  kept n=40 flips  42.5  Δ  46.2 [29.7, 62.0]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  96.3  off-axis permutations   2.4
+  q7b   shuf×3   items 191  reversed n=278 flips  62.2  kept n=295 flips  31.2  Δ  31.0 [23.4, 38.8]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  96.3  off-axis permutations   2.4
+  ivl2b pooled   items 140  reversed n=313 flips  74.1  kept n=247 flips  50.2  Δ  23.9 [15.8, 31.7]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  87.1  off-axis permutations   7.9
+  ivl2b shift    items 140  reversed n=109 flips  82.6  kept n=31 flips  96.8  Δ -14.2 [-23.3, -4.1]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  87.1  off-axis permutations   7.9
+  ivl2b shuf×3   items 140  reversed n=204 flips  69.6  kept n=216 flips  43.5  Δ  26.1 [16.9, 34.9]  same column n=0 flips   nan  ambiguous 0
+        reference: mirror  87.1  off-axis permutations   7.9
+
+== Seeds that reverse the objects: geometry-consistent left-right items flipped by the mirror; items whose number of flipping shuf seeds equals the number of shuf seeds that reverse the two objects' column order
+  q3b: items 98 (0 items with the same column or ambiguous not counted)
+      items with flips = reversals 28/98 =  28.6%; of the items flipped by 3/3 seeds, reversed by 3/3 5/40
+  q7b: items 184 (0 items with the same column or ambiguous not counted)
+      items with flips = reversals 83/184 =  45.1%; of the items flipped by 3/3 seeds, reversed by 3/3 7/24
+  ivl2b: items 122 (0 items with the same column or ambiguous not counted)
+      items with flips = reversals 48/122 =  39.3%; of the items flipped by 3/3 seeds, reversed by 3/3 3/27
+
+== What'sUp (no boxes): geometry-consistent left-right items, changed answers that go to the mirror relation / an off-axis relation (width conditions)
+  q3b   mirror left: items 96 changed 96 -> mirror 79 (82.3%) off-axis 17  right: items 96 changed 96 -> mirror 79 (82.3%) off-axis 17  all: items 192 changed 192 -> mirror 158 (82.3%) off-axis 34
+  q3b   shift  left: items 96 changed 85 -> mirror 76 (89.4%) off-axis 9  right: items 96 changed 96 -> mirror 75 (78.1%) off-axis 21  all: items 192 changed 181 -> mirror 151 (83.4%) off-axis 30
+  q3b   shuf0  left: items 96 changed 71 -> mirror 30 (42.3%) off-axis 41  right: items 96 changed 74 -> mirror 26 (35.1%) off-axis 48  all: items 192 changed 145 -> mirror 56 (38.6%) off-axis 89
+  q3b   shuf1  left: items 96 changed 26 -> mirror 1 (3.8%) off-axis 25  right: items 96 changed 81 -> mirror 32 (39.5%) off-axis 49  all: items 192 changed 107 -> mirror 33 (30.8%) off-axis 74
+  q3b   shuf2  left: items 96 changed 51 -> mirror 5 (9.8%) off-axis 46  right: items 96 changed 76 -> mirror 28 (36.8%) off-axis 48  all: items 192 changed 127 -> mirror 33 (26.0%) off-axis 94
+  q7b   mirror left: items 81 changed 81 -> mirror 59 (72.8%) off-axis 22  right: items 73 changed 73 -> mirror 52 (71.2%) off-axis 21  all: items 154 changed 154 -> mirror 111 (72.1%) off-axis 43
+  q7b   shift  left: items 81 changed 81 -> mirror 62 (76.5%) off-axis 19  right: items 73 changed 72 -> mirror 41 (56.9%) off-axis 31  all: items 154 changed 153 -> mirror 103 (67.3%) off-axis 50
+  q7b   shuf0  left: items 81 changed 71 -> mirror 14 (19.7%) off-axis 57  right: items 73 changed 59 -> mirror 3 (5.1%) off-axis 56  all: items 154 changed 130 -> mirror 17 (13.1%) off-axis 113
+  q7b   shuf1  left: items 81 changed 45 -> mirror 3 (6.7%) off-axis 42  right: items 73 changed 69 -> mirror 5 (7.2%) off-axis 64  all: items 154 changed 114 -> mirror 8 (7.0%) off-axis 106
+  q7b   shuf2  left: items 81 changed 68 -> mirror 1 (1.5%) off-axis 67  right: items 73 changed 66 -> mirror 6 (9.1%) off-axis 60  all: items 154 changed 134 -> mirror 7 (5.2%) off-axis 127
+  ivl2b mirror left: items 98 changed 98 -> mirror 97 (99.0%) off-axis 1  right: items 98 changed 96 -> mirror 89 (92.7%) off-axis 7  all: items 196 changed 194 -> mirror 186 (95.9%) off-axis 8
+  ivl2b shift  left: items 98 changed 98 -> mirror 97 (99.0%) off-axis 1  right: items 98 changed 97 -> mirror 92 (94.8%) off-axis 5  all: items 196 changed 195 -> mirror 189 (96.9%) off-axis 6
+  ivl2b shuf0  left: items 98 changed 5 -> mirror 0 (0.0%) off-axis 5  right: items 98 changed 30 -> mirror 14 (46.7%) off-axis 16  all: items 196 changed 35 -> mirror 14 (40.0%) off-axis 21
+  ivl2b shuf1  left: items 98 changed 68 -> mirror 54 (79.4%) off-axis 14  right: items 98 changed 53 -> mirror 47 (88.7%) off-axis 6  all: items 196 changed 121 -> mirror 101 (83.5%) off-axis 20
+  ivl2b shuf2  left: items 98 changed 19 -> mirror 14 (73.7%) off-axis 5  right: items 98 changed 72 -> mirror 47 (65.3%) off-axis 25  all: items 196 changed 91 -> mirror 61 (67.0%) off-axis 30

@@ -1,0 +1,86 @@
+
+=== results/blocks_dose/dose_qwen2.5-vl-3b-instruct.jsonl  items 650  ViT 32 blocks
+   base orig: positions flipped only (lr→w, ud→h), how many layers until the answer flips; base pix: pixels flipped + positions flipped back, how many layers until the answer flips back
+-- orig vit prefix lr
+   L= 0  flip   0.0% [-0%,1%] n=383  carry +0.00
+   L= 4  flip  10.2% [8%,14%] n=383  carry +0.15
+   L= 8  flip  11.7% [9%,15%] n=383  carry +0.34
+   L=12  flip  13.1% [10%,17%] n=383  carry +0.38
+   L=16  flip  15.7% [12%,20%] n=383  carry +0.41
+   L=20  flip  15.9% [13%,20%] n=383  carry +0.42
+   L=24  flip  18.3% [15%,22%] n=383  carry +0.51
+   L=28  flip  17.8% [14%,22%] n=383  carry +0.51
+   L=32  flip  46.7% [42%,52%] n=383  carry +1.24
+-- orig vit prefix ud
+   L= 0  flip   0.0% [0%,1%] n=267  carry +0.00
+   L= 4  flip  10.1% [7%,14%] n=267  carry +0.07
+   L= 8  flip  11.6% [8%,16%] n=267  carry +0.20
+   L=12  flip  12.4% [9%,17%] n=267  carry +0.31
+   L=16  flip  15.0% [11%,20%] n=267  carry +0.46
+   L=20  flip  16.5% [13%,21%] n=267  carry +0.50
+   L=24  flip  18.4% [14%,23%] n=267  carry +0.52
+   L=28  flip  18.4% [14%,23%] n=267  carry +0.53
+   L=32  flip  27.7% [23%,33%] n=267  carry +0.64
+-- orig vit suffix lr
+   L= 0  flip   0.0% [-0%,1%] n=383  carry +0.00
+   L= 4  flip  47.8% [43%,53%] n=383  carry +1.32
+   L= 8  flip  47.8% [43%,53%] n=383  carry +1.33
+   L=12  flip  49.9% [45%,55%] n=383  carry +1.40
+   L=16  flip  50.4% [45%,55%] n=383  carry +1.40
+   L=20  flip  49.6% [45%,55%] n=383  carry +1.38
+   L=24  flip  48.6% [44%,54%] n=383  carry +1.37
+   L=28  flip  47.8% [43%,53%] n=383  carry +1.29
+   L=32  flip  46.7% [42%,52%] n=383  carry +1.24
+-- orig vit suffix ud
+   L= 0  flip   0.0% [0%,1%] n=267  carry +0.00
+   L= 4  flip   9.0% [6%,13%] n=267  carry +0.12
+   L= 8  flip   9.4% [6%,13%] n=267  carry +0.11
+   L=12  flip  13.9% [10%,19%] n=267  carry +0.22
+   L=16  flip  13.5% [10%,18%] n=267  carry +0.25
+   L=20  flip  22.5% [18%,28%] n=267  carry +0.47
+   L=24  flip  21.3% [17%,27%] n=267  carry +0.49
+   L=28  flip  25.1% [20%,31%] n=267  carry +0.58
+   L=32  flip  27.7% [23%,33%] n=267  carry +0.64
+-- pix vit prefix lr
+   L= 0  flip   0.0% [-0%,1%] n=383  carry +0.00
+   L= 4  flip   6.3% [4%,9%] n=383  carry +0.16
+   L= 8  flip  12.5% [10%,16%] n=383  carry +0.29
+   L=12  flip  13.3% [10%,17%] n=383  carry +0.32
+   L=16  flip  14.6% [11%,19%] n=383  carry +0.39
+   L=20  flip  14.1% [11%,18%] n=383  carry +0.40
+   L=24  flip  17.5% [14%,22%] n=383  carry +0.48
+   L=28  flip  17.8% [14%,22%] n=383  carry +0.48
+   L=32  flip  43.6% [39%,49%] n=383  carry +1.22
+-- pix vit prefix ud
+   L= 0  flip   0.0% [0%,1%] n=267  carry +0.00
+   L= 4  flip  15.0% [11%,20%] n=267  carry +0.19
+   L= 8  flip  16.5% [13%,21%] n=267  carry +0.29
+   L=12  flip  17.2% [13%,22%] n=267  carry +0.36
+   L=16  flip  23.2% [19%,29%] n=267  carry +0.35
+   L=20  flip  22.1% [18%,27%] n=267  carry +0.35
+   L=24  flip  25.8% [21%,31%] n=267  carry +0.38
+   L=28  flip  25.5% [21%,31%] n=267  carry +0.38
+   L=32  flip  36.3% [31%,42%] n=267  carry +0.51
+-- pix vit suffix lr
+   L= 0  flip   0.0% [-0%,1%] n=383  carry +0.00
+   L= 4  flip  43.3% [38%,48%] n=383  carry +1.27
+   L= 8  flip  43.6% [39%,49%] n=383  carry +1.28
+   L=12  flip  48.0% [43%,53%] n=383  carry +1.36
+   L=16  flip  46.7% [42%,52%] n=383  carry +1.37
+   L=20  flip  48.8% [44%,54%] n=383  carry +1.37
+   L=24  flip  47.3% [42%,52%] n=383  carry +1.34
+   L=28  flip  43.3% [38%,48%] n=383  carry +1.24
+   L=32  flip  43.6% [39%,49%] n=383  carry +1.22
+-- pix vit suffix ud
+   L= 0  flip   0.0% [0%,1%] n=267  carry +0.00
+   L= 4  flip   9.4% [6%,13%] n=267  carry +0.12
+   L= 8  flip   7.5% [5%,11%] n=267  carry +0.12
+   L=12  flip  14.2% [11%,19%] n=267  carry +0.26
+   L=16  flip  17.6% [14%,23%] n=267  carry +0.26
+   L=20  flip  28.5% [23%,34%] n=267  carry +0.43
+   L=24  flip  31.1% [26%,37%] n=267  carry +0.45
+   L=28  flip  34.1% [29%,40%] n=267  carry +0.44
+   L=32  flip  36.3% [31%,42%] n=267  carry +0.51
+-- agreement with the whole-model replacement (L = all; should be near 100%)
+   orig vit: 100.0% [99%,100%] n=650
+   pix vit: 100.0% [99%,100%] n=650

@@ -1,0 +1,55 @@
+== Depth conflict items: CV-Bench 3D Depth, 600 items (base model); orig errors on the conflict (counter) items corrected (paired bootstrap, by item)
+  7b: conflict items 64, orig accuracy 44/64; orig wrong on 20 items
+    vit_h: corrected 11/20 55.0 [34.2, 74.2]; broken (of the 44 items correct on orig) 11 25.0 [14.6, 39.4]
+    vit_w: corrected 6/20 30.0 [14.5, 51.9]; broken (of the 44 items correct on orig) 11 25.0 [14.6, 39.4]
+    correction rate vit_h − vit_w: 25.0 [0.0, 50.0] points (paired on the same errors)
+    breaking rate vit_h − vit_w: 0.0 [-13.6, 13.6] points
+    corrected by both 5; vit_h only 6; vit_w only 1
+  3b: conflict items 64, orig accuracy 35/64; orig wrong on 29 items
+    vit_h: corrected 12/29 41.4 [25.5, 59.3]; broken (of the 35 items correct on orig) 5 14.3 [6.3, 29.4]
+    vit_w: corrected 15/29 51.7 [34.4, 68.6]; broken (of the 35 items correct on orig) 16 45.7 [30.5, 61.8]
+    correction rate vit_h − vit_w: -10.3 [-31.0, 10.3] points (paired on the same errors)
+    breaking rate vit_h − vit_w: -31.4 [-51.4, -11.4] points
+    corrected by both 8; vit_h only 4; vit_w only 7
+
+== Held-out half, 314 items (permutation controls), heuristic-following / opposing groups; four height permutations vs four width permutations (averaged per item); paired bootstrap
+  q7b: items 225 (following 196, opposing 29; orig ties removed)
+    vit_h_shift  total change  24.9  following  28.1  opposing   3.4  gap  24.6
+    vit_h_shuf0  total change  21.8  following  23.0  opposing  13.8  gap   9.2
+    vit_h_shuf1  total change  18.2  following  18.9  opposing  13.8  gap   5.1
+    vit_h_shuf2  total change  24.4  following  26.5  opposing  10.3  gap  16.2
+    vit_w_shift  total change  11.1  following   6.1  opposing  44.8  gap -38.7
+    vit_w_shuf0  total change  10.7  following   6.6  opposing  37.9  gap -31.3
+    vit_w_shuf1  total change  13.8  following   7.7  opposing  55.2  gap -47.5
+    vit_w_shuf2  total change   9.8  following   5.6  opposing  37.9  gap -32.3
+    height permutations (all four): total change  22.3  gap 13.8 [3.2, 22.9]  gap_norm 61.6 [14.4, 101.2]
+    width permutations (all four): total change  11.3  gap -37.5 [-50.8, -24.2]  gap_norm -330.5 [-463.7, -225.1]
+    DiD = gap_h − gap_w: 51.2 [36.2, 65.7]; DiD_norm: 392.2 [287.7, 525.0] (ratio, shown x 100)
+    strength-matched: h_shuf1 (total change  18.2) vs w_shuf1 ( 13.8): gap difference 52.6 [28.4, 75.5]
+  q3b: items 225 (following 188, opposing 37; orig ties removed)
+    vit_h_shift  total change  26.7  following  30.9  opposing   5.4  gap  25.4
+    vit_h_shuf0  total change  18.7  following  21.8  opposing   2.7  gap  19.1
+    vit_h_shuf1  total change  13.3  following  14.9  opposing   5.4  gap   9.5
+    vit_h_shuf2  total change  20.9  following  25.0  opposing   0.0  gap  25.0
+    vit_w_shift  total change  16.4  following   9.6  opposing  51.4  gap -41.8
+    vit_w_shuf0  total change  12.9  following   7.4  opposing  40.5  gap -33.1
+    vit_w_shuf1  total change  12.0  following   7.4  opposing  35.1  gap -27.7
+    vit_w_shuf2  total change  12.0  following   6.9  opposing  37.8  gap -30.9
+    height permutations (all four): total change  19.9  gap 19.8 [13.9, 25.4]  gap_norm 99.4 [73.4, 119.0]
+    width permutations (all four): total change  13.3  gap -33.4 [-47.2, -20.1]  gap_norm -250.3 [-350.9, -162.4]
+    DiD = gap_h − gap_w: 53.1 [39.1, 67.8]; DiD_norm: 349.6 [260.1, 450.4] (ratio, shown x 100)
+    strength-matched: h_shuf1 (total change  13.3) vs w_shuf0 ( 12.9): gap difference 42.6 [24.7, 60.5]
+
+== Accuracy, gold base rate and the model's heuristic-following rate (consistent + counter items only; following rate − base rate, paired bootstrap by item)
+  7b held-out half: n=225 (consistent 191, conflict 34)
+    accuracy: consistent 95.3 [91.3, 97.5]  conflict 58.8 [42.2, 73.6]
+    gold base rate (share of consistent items)  84.9; model following rate 87.1 [82.1, 90.9]; following rate − base rate 2.2 [-1.8, 6.7] points
+  7b all 600 items (base model): n=423 (consistent 359, conflict 64)
+    accuracy: consistent 94.4 [91.6, 96.4]  conflict 68.8 [56.6, 78.8]
+    gold base rate (share of consistent items)  84.9; model following rate 84.9 [81.1, 88.0]; following rate − base rate 0.0 [-2.8, 2.8] points
+  3b held-out half: n=225 (consistent 191, conflict 34)
+    accuracy: consistent 90.1 [85.0, 93.5]  conflict 52.9 [36.7, 68.5]
+    gold base rate (share of consistent items)  84.9; model following rate 83.6 [78.2, 87.8]; following rate − base rate -1.3 [-6.7, 4.0] points
+  3b all 600 items (base model): n=423 (consistent 359, conflict 64)
+    accuracy: consistent 88.0 [84.3, 91.0]  conflict 54.7 [42.6, 66.3]
+    gold base rate (share of consistent items)  84.9; model following rate 81.6 [77.6, 85.0]; following rate − base rate -3.3 [-7.3, 0.5] points

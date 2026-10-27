@@ -1,0 +1,4 @@
+qwen25vl3b changed 105 to on/under 93 left<->right 8 | geometry-consistent subset 192 left-right swaps 8
+qwen25vl7b changed 118 to on/under 111 left<->right 1 | geometry-consistent subset 154 left-right swaps 1
+internvl32b changed 77 to on/under 42 left<->right 34 | geometry-consistent subset 196 left-right swaps 33
+internvl38b changed 141 to on/under 130 left<->right 1 | geometry-consistent subset 155 left-right swaps 1

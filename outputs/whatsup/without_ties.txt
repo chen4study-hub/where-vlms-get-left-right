@@ -1,0 +1,85 @@
+qwen25vl3b.jsonl: 2884 rows, 55 tied (1.9%), on 50/412 items; per variant {'vflip': 22, 'vit_h': 11, 'vit_w': 10, 'llm_h': 4, 'orig': 3, 'llm_w': 3}
+qwen25vl7b.jsonl: 2884 rows, 43 tied (1.5%), on 40/412 items; per variant {'vit_h': 13, 'vflip': 13, 'vit_w': 5, 'orig': 5, 'llm_w': 4, 'hflip': 2}
+internvl32b.jsonl: 2884 rows, 26 tied (0.9%), on 23/412 items; per variant {'vit_h': 7, 'vflip': 7, 'orig': 3, 'vit_w': 3, 'llm_h': 3, 'llm_w': 2}
+---- re-computed without the tied items ----
+
+=== qwen25vl3b  items 362
+-- accuracy (against the relation implied by the geometry)
+  orig    lr:  96.7% [93,98] n=182
+  orig    ud:  95.6% [91,98] n=180
+  hflip   lr:  97.3% [94,99] n=182
+  hflip   ud:  95.6% [91,98] n=180
+  vflip   lr:  65.9% [59,72] n=182
+  vflip   ud:  51.7% [44,59] n=180
+-- flip rates on the geometry-consistent subset (relative to orig; 'mirror': changed to the mirror relation)
+  [lr] orig→vit_w      100.0% [98,100] n=174  mirror  82.2% [76,87] n=174
+  [lr] orig→llm_w        0.0% [0,2] n=174  mirror   0.0% [0,2] n=174
+  [lr] orig→vit_h       49.4% [42,57] n=174  mirror   0.0% [0,2] n=174
+  [lr] orig→llm_h        0.6% [0,3] n=174  mirror   0.0% [0,2] n=174
+  [ud] orig→vit_w       14.1% [8,23] n=92  mirror   0.0% [0,4] n=92
+  [ud] orig→llm_w        0.0% [0,4] n=92  mirror   0.0% [0,4] n=92
+  [ud] orig→vit_h       84.8% [76,91] n=92  mirror  82.6% [74,89] n=92
+  [ud] orig→llm_h        2.2% [1,8] n=92  mirror   0.0% [0,4] n=92
+-- agreement with the predictions for the real pixel transform (all items)
+  vit_w      vs hflip  lr:  81.3% [75,86] n=182
+  vit_w      vs hflip  ud:  86.7% [81,91] n=180
+  llm_w      vs hflip  lr:   1.1% [0,4] n=182
+  llm_w      vs hflip  ud:  98.9% [96,100] n=180
+  vit_h      vs vflip  lr:  74.2% [67,80] n=182
+  vit_h      vs vflip  ud:  78.9% [72,84] n=180
+  orig       vs hflip  lr:   1.1% [0,4] n=182
+  orig       vs hflip  ud:  98.9% [96,100] n=180
+
+=== qwen25vl7b  items 372
+-- accuracy (against the relation implied by the geometry)
+  orig    lr:  86.0% [80,90] n=179
+  orig    ud:  97.9% [95,99] n=193
+  hflip   lr:  85.5% [80,90] n=179
+  hflip   ud:  98.4% [96,99] n=193
+  vflip   lr:  58.7% [51,66] n=179
+  vflip   ud:  47.7% [41,55] n=193
+-- flip rates on the geometry-consistent subset (relative to orig; 'mirror': changed to the mirror relation)
+  [lr] orig→vit_w      100.0% [97,100] n=136  mirror  74.3% [66,81] n=136
+  [lr] orig→llm_w        0.0% [0,3] n=136  mirror   0.0% [0,3] n=136
+  [lr] orig→vit_h       61.0% [53,69] n=136  mirror   0.0% [0,3] n=136
+  [lr] orig→llm_h        0.0% [0,3] n=136  mirror   0.0% [0,3] n=136
+  [ud] orig→vit_w       12.0% [7,20] n=92  mirror   0.0% [0,4] n=92
+  [ud] orig→llm_w        0.0% [0,4] n=92  mirror   0.0% [0,4] n=92
+  [ud] orig→vit_h       81.5% [72,88] n=92  mirror  81.5% [72,88] n=92
+  [ud] orig→llm_h        0.0% [0,4] n=92  mirror   0.0% [0,4] n=92
+-- agreement with the predictions for the real pixel transform (all items)
+  vit_w      vs hflip  lr:  73.2% [66,79] n=179
+  vit_w      vs hflip  ud:  90.7% [86,94] n=193
+  llm_w      vs hflip  lr:   3.4% [2,7] n=179
+  llm_w      vs hflip  ud:  99.0% [96,100] n=193
+  vit_h      vs vflip  lr:  63.7% [56,70] n=179
+  vit_h      vs vflip  ud:  76.2% [70,82] n=193
+  orig       vs hflip  lr:   3.4% [2,7] n=179
+  orig       vs hflip  ud:  99.0% [96,100] n=193
+
+=== internvl32b  items 389
+-- accuracy (against the relation implied by the geometry)
+  orig    lr:  98.5% [96,99] n=200
+  orig    ud:  93.1% [89,96] n=189
+  hflip   lr:  96.5% [93,98] n=200
+  hflip   ud:  92.1% [87,95] n=189
+  vflip   lr:  72.5% [66,78] n=200
+  vflip   ud:  35.4% [29,42] n=189
+-- flip rates on the geometry-consistent subset (relative to orig; 'mirror': changed to the mirror relation)
+  [lr] orig→vit_w       99.0% [96,100] n=192  mirror  94.8% [91,97] n=192
+  [lr] orig→llm_w        1.0% [0,4] n=192  mirror   0.5% [0,3] n=192
+  [lr] orig→vit_h       37.5% [31,45] n=192  mirror   0.0% [0,2] n=192
+  [lr] orig→llm_h        2.6% [1,6] n=192  mirror   0.0% [0,2] n=192
+  [ud] orig→vit_w       21.0% [13,33] n=62  mirror   0.0% [0,6] n=62
+  [ud] orig→llm_w        0.0% [0,6] n=62  mirror   0.0% [0,6] n=62
+  [ud] orig→vit_h       77.4% [66,86] n=62  mirror  53.2% [41,65] n=62
+  [ud] orig→llm_h        1.6% [0,9] n=62  mirror   0.0% [0,6] n=62
+-- agreement with the predictions for the real pixel transform (all items)
+  vit_w      vs hflip  lr:  93.0% [89,96] n=200
+  vit_w      vs hflip  ud:  85.7% [80,90] n=189
+  llm_w      vs hflip  lr:   0.5% [0,3] n=200
+  llm_w      vs hflip  ud:  92.6% [88,96] n=189
+  vit_h      vs vflip  lr:  68.0% [61,74] n=200
+  vit_h      vs vflip  ud:  43.9% [37,51] n=189
+  orig       vs hflip  lr:   0.0% [0,2] n=200
+  orig       vs hflip  ud:  91.0% [86,94] n=189

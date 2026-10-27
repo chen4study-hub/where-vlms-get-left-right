@@ -1,0 +1,58 @@
+== Build check (each hybrid reloaded from disk and compared tensor by tensor)
+  h_vitS {'vit': 'S', 'merger': 'S', 'llm': 'B'}: vit from S 324 / from B 0 / same in both 61 / wrong 0; merger from S 4 / from B 0 / same in both 1 / wrong 0; llm from S 0 / from B 433 / same in both 2 / wrong 0
+  h_llmS {'vit': 'B', 'merger': 'B', 'llm': 'S'}: vit from S 0 / from B 324 / same in both 61 / wrong 0; merger from S 0 / from B 4 / same in both 1 / wrong 0; llm from S 433 / from B 0 / same in both 2 / wrong 0
+  h_vitS_mB {'vit': 'S', 'merger': 'B', 'llm': 'B'}: vit from S 324 / from B 0 / same in both 61 / wrong 0; merger from S 0 / from B 4 / same in both 1 / wrong 0; llm from S 0 / from B 433 / same in both 2 / wrong 0
+  h_llmS_mS {'vit': 'B', 'merger': 'S', 'llm': 'S'}: vit from S 0 / from B 324 / same in both 61 / wrong 0; merger from S 4 / from B 0 / same in both 1 / wrong 0; llm from S 433 / from B 0 / same in both 2 / wrong 0
+  h_vitS_last4 {'vit': 'B', 'merger': 'B', 'llm': 'B', 'vit_blocks_S': [28, 29, 30, 31]}: vit from S 38 / from B 286 / same in both 61 / wrong 0; merger from S 0 / from B 4 / same in both 1 / wrong 0; llm from S 0 / from B 433 / same in both 2 / wrong 0
+  tensors that differ between B and S: vit 324/385; merger 4/5; llm 433/435; ViT blocks that differ [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+
+== Configurations (CV-Bench 2D, 650 items × two option orders; main-table metrics; the CV-Bench 3D depth check for base, ladder, h_vitS and h_llmS)
+  base       {'vit': 'B', 'merger': 'B', 'llm': 'B'}: accuracy 76.1 (left-right 74.7 up-down 78.1) first option 47.0% ties 0
+             agreement lr 79.6
+             3D model 83.0 agrees with the rule 81.6 items where the rule is wrong 54.7
+  ladder     {'vit': 'S', 'merger': 'S', 'llm': 'S'}: accuracy 84.1 (left-right 81.7 up-down 87.5) first option 49.0% ties 0
+             agreement lr 87.5
+             3D model 80.9 agrees with the rule 82.3 items where the rule is wrong 45.3
+  h_vitS     {'vit': 'S', 'merger': 'S', 'llm': 'B'}: accuracy 72.0 (left-right 68.4 up-down 77.2) first option 46.6% ties 0
+             agreement lr 75.4
+             3D model 86.5 agrees with the rule 84.6 items where the rule is wrong 56.2
+  h_llmS     {'vit': 'B', 'merger': 'B', 'llm': 'S'}: accuracy 85.3 (left-right 82.8 up-down 89.0) first option 48.7% ties 0
+             agreement lr 88.4
+             3D model 79.0 agrees with the rule 82.3 items where the rule is wrong 39.1
+  h_vitS_mB  {'vit': 'S', 'merger': 'B', 'llm': 'B'}: accuracy 71.8 (left-right 68.0 up-down 77.3) first option 46.6% ties 0
+             agreement lr 75.3
+  h_llmS_mS  {'vit': 'B', 'merger': 'S', 'llm': 'S'}: accuracy 85.4 (left-right 83.0 up-down 88.8) first option 48.6% ties 0
+             agreement lr 89.6
+  h_vitS_last4 {'vit': 'B', 'merger': 'B', 'llm': 'B', 'vit_blocks_S': (28, 29, 30, 31)}: accuracy 75.9 (left-right 73.6 up-down 79.2) first option 47.3% ties 0
+             agreement lr 80.0
+
+== Decomposition of the gain (all items, n = 1300, paired bootstrap 95% intervals; the merger goes with the ViT)
+  ladder       − base: +8.0 [+5.9, +10.0]; share of the ladder gain 1.00 [1.00, 1.00]
+  h_vitS       − base: -4.1 [-5.7, -2.4]; share of the ladder gain -0.51 [-0.86, -0.26]
+  h_llmS       − base: +9.2 [+7.2, +11.2]; share of the ladder gain 1.15 [0.98, 1.40]
+  h_vitS_mB    − base: -4.2 [-5.8, -2.5]; share of the ladder gain -0.53 [-0.89, -0.29]
+  h_llmS_mS    − base: +9.3 [+7.3, +11.2]; share of the ladder gain 1.16 [0.99, 1.39]
+  h_vitS_last4 − base: -0.2 [-0.9, +0.6]; share of the ladder gain -0.02 [-0.13, 0.08]
+  R_V (share of the gain kept with the vision side from S) -0.51 [-0.86, -0.26]; R_L (LLM side) 1.15 [0.98, 1.40]; interaction +2.8
+
+== Decomposition of the gain (left-right, n = 766, paired bootstrap 95% intervals; the merger goes with the ViT)
+  ladder       − base: +7.0 [+4.6, +9.7]; share of the ladder gain 1.00 [1.00, 1.00]
+  h_vitS       − base: -6.3 [-8.4, -4.0]; share of the ladder gain -0.89 [-1.62, -0.48]
+  h_llmS       − base: +8.1 [+5.6, +10.7]; share of the ladder gain 1.15 [0.91, 1.53]
+  h_vitS_mB    − base: -6.7 [-8.9, -4.4]; share of the ladder gain -0.94 [-1.71, -0.53]
+  h_llmS_mS    − base: +8.4 [+5.9, +11.0]; share of the ladder gain 1.19 [0.94, 1.54]
+  h_vitS_last4 − base: -1.0 [-2.1, -0.1]; share of the ladder gain -0.15 [-0.36, -0.01]
+  R_V (share of the gain kept with the vision side from S) -0.89 [-1.62, -0.48]; R_L (LLM side) 1.15 [0.91, 1.53]; interaction +5.2
+
+== Decomposition of the gain (up-down, n = 534, paired bootstrap 95% intervals; the merger goes with the ViT)
+  ladder       − base: +9.4 [+5.8, +12.9]; share of the ladder gain 1.00 [1.00, 1.00]
+  h_vitS       − base: -0.9 [-3.6, +2.1]; share of the ladder gain -0.10 [-0.52, 0.18]
+  h_llmS       − base: +10.9 [+7.7, +14.0]; share of the ladder gain 1.16 [0.92, 1.53]
+  h_vitS_mB    − base: -0.7 [-3.4, +2.1]; share of the ladder gain -0.08 [-0.49, 0.19]
+  h_llmS_mS    − base: +10.7 [+7.5, +13.9]; share of the ladder gain 1.14 [0.92, 1.51]
+  h_vitS_last4 − base: +1.1 [-0.2, +2.6]; share of the ladder gain 0.12 [-0.03, 0.29]
+  R_V (share of the gain kept with the vision side from S) -0.10 [-0.52, 0.18]; R_L (LLM side) 1.16 [0.92, 1.53]; interaction -0.6
+
+== Re-run base / ladder compared row by row with the runs of the public checkpoints (same idx, variant, option order)
+  base: 9100 rows, same prediction 100.00%, max log-probability difference 0.0000
+  ladder: 9100 rows, same prediction 100.00%, max log-probability difference 0.0000

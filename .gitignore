@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+# local runs: per-item predictions, downloaded datasets, items and images built by the modules
+/results
+/data
+/datasets/

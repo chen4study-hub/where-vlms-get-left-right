@@ -1,0 +1,7 @@
+
+== 7B (video mode, 187 items)
+  lr vit_w : video geometry-consistent  96.0% (n=100), all  89.8% (n=108) | image geometry-consistent  97.0% (n=100)
+  lr llm_w : video geometry-consistent   0.0% (n=100), all   0.0% (n=108) | image geometry-consistent   0.0% (n=100)
+  lr video orig accuracy 85.2% (n=108)
+  ud vit_h : video geometry-consistent  63.8% (n=58), all  51.9% (n=79) | image geometry-consistent  50.0% (n=60)
+  ud video orig accuracy 86.1% (n=79)
